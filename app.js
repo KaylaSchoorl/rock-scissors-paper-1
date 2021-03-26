@@ -15,22 +15,34 @@ const drawText = document.querySelector("#draws")
 let wins = 0;
 let losses = 0;
 let draws = 0;
+let total =0;
 // set event listeners to update state and DOM
 
 playButton.addEventListener ('click', () => {
-    // results of what the player has chosen
+   
     const player = document.querySelector('input:checked').value;
-    // store what the computer has chosen
+
+    
     const computer = randomThrow();
     
-    
-    // determine if they've won or lost against the computer
+   
     const results = didUserWin(player, computer);
     
-    // if the user wins then we will increase our wins and update text content
-    // if the user loses we will increase our loses and update the text content
-    // if there is no winner then we increment our draws and update text content
+    
+    if (results === 'draw') {
+        draws++
+        drawText.textContent = `${draws} Draws`
+    }
     
     
+    if (results === 'loss') {
+        losses++
+        lossesText.textContent = `${losses} losses`
+    }
+
+    if (results === 'win') {
+        wins++
+        winsText.textContent = `${wins} wins`
+    }
 
 });
