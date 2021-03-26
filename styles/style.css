@@ -82,6 +82,13 @@ p {
     margin: var(--gutter);
 }
   
+#rock {
+    display:flex;
+    justify-content: flex-end;
+    align-items: left;
+    padding: 3%;
+
+}
 footer {
     position: fixed;
     width: 100%;

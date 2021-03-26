@@ -10,6 +10,7 @@ const scissors = document.querySelector("#scissors")
 const winsText = document.querySelector("#wins")
 const lossesText = document.querySelector("#losses")
 const drawText = document.querySelector("#draws")
+const totalAnswers = document.querySelector("#total")
 
 // initialize state
 let wins = 0;
@@ -32,17 +33,25 @@ playButton.addEventListener ('click', () => {
     if (results === 'draw') {
         draws++
         drawText.textContent = `${draws} Draws`
+        total++
+        totalAnswers.textContent = `${total} total`
     }
     
     
     if (results === 'loss') {
         losses++
         lossesText.textContent = `${losses} losses`
+        total++
+        totalAnswers.textContent = `${total} total`
     }
 
     if (results === 'win') {
-        wins++
+        wins++ 
         winsText.textContent = `${wins} wins`
+        total++
+        totalAnswers.textContent = `${total} total`
     }
+
+    
 
 });
