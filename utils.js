@@ -1,28 +1,35 @@
 export function didUserWin(player, computer) {
     if (player === computer) {
-        return 'draw';}
+        return 'draw';
+    }
 
   if (computer === 'rock' && player === 'scissors'){
-    return 'loss'}
+    return 'loss'
+}
 
     if (computer === 'rock' && player === 'paper'){
-    return 'win'}
+    return 'win'
+}
     
     if (computer === 'paper' && player === 'scissors'){
-    return 'win'}
+    return 'win'
+}
 
     if (computer === 'paper' && player === 'rock'){
-        return 'loss'}
+        return 'loss'
+    }
 
     if (computer === 'scissors' && player === 'paper'){
-            return 'loss'}
+            return 'loss'
+        }
 
     if (computer === 'scissors' && player === 'rock'){
-                return 'win'}
+                return 'win'
+            }
             
     }
 
-    export function randomThrow {
+export function randomThrow() {
 
         const throwNumber = Math.ceil(Math.random() *3);
 
