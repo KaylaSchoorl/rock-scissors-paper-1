@@ -56,7 +56,7 @@ export function didUserWin(player, computer) {
     if (computer === 'scissors' && player === 'rock'){
         return 'loss'
     };
-
+}
 
     export function randomThrow() {
 
